@@ -40,7 +40,13 @@ public class Suma {
 	 */
 	
 	public double sumaNumReales (double numReal1, double numReal2) {
-		return numReal1 + numReal2;	
+		
+		if (numReal1 >= 0 && numReal2 >= 0 ) {
+			return numReal1 + numReal2;
+		}else
+			System.out.println("error, número negativo");
+		return -1;
+		
 	}
 	
 	//Suma de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
