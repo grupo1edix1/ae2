@@ -1,0 +1,119 @@
+package javabeans;
+
+/**
+ * <h2> Clase Resta </h2>
+ * Clase que reúne varios <b>métodos de resta</b>: 
+ * resta de 2 números reales, de 2 números enteros, de 3 números reales y resta con acumulador.
+ * 
+ * @author Grupo_1
+ * @version 1.0
+ * 
+ * @see Cociente
+ * @see Producto
+ * @see Suma
+ *
+ */
+
+public class Resta {
+	
+	//Declaro atributo de la clase valorAcumulado
+	
+	private double valorAcumulado = 0;
+
+	//Resta de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
+	/**
+	 * 
+	 * <p>Método que devuelve la resta de de dos numeros reales. Necesita dos parámetros de entrada que son los números 
+	 * reales que se restarán y que devolverán un valor de salida que será el resultado de la resta. </p>
+	 * 
+	 * <p>Si cualquiera de los parámetros o el resultado final son menores o iguales que 0 entonces devolverá 0 y 
+	 * un mensaje de error. </p>
+	 * 
+	 * <p>Tanto los parámetros como el resultado final no debe sobrepasar los 64 bits para evitar el error.</p>
+	 *  
+	 * @param numReal1 minuendo que representa un número real (tipo double).
+	 * @param numReal2 sustraendo que representa otro número real (tipo double).
+	 * 
+	 * @return devuelve el resultado de la resta de los dos números reales. Tipo double.
+	 */
+	
+	public double restaNumReales(double numReal1, double numReal2) {
+		return numReal1 - numReal2;
+	}
+	
+	//Resta de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
+	/**
+	 * 
+	 * <p>Método que devuelve la resta de dos números enteros. Necesita dos parámetros de entrada que son los números 
+	 * enteros que se restarán y que devolverán un valor de salida que será el resultado de la resta.</p>
+	 * 
+	 * <p>Si cualquiera de los parámetros o el resultado final son menores o iguales que 0 entonces devolverá 0 y 
+	 * un mensaje de error. </p>
+	 * 
+	 * Tanto los parámetros como el resultado final no debe sobrepasar el valor -2,147,483,647 para evitar el error.
+	 * 
+	 * @param numEntero1 minuendo que representa uno de los números enteros (tipo int).
+	 * @param numEntero2 sustraendo que representa otro número entero (tipo int).
+	 * 
+	 * @return devuelve el resultado de la resta de los dos números enteros. Tipo int. 
+	 */
+	
+	public int restaNumEnteros (int numEntero1, int numEntero2) {
+		return numEntero1 - numEntero2;
+	}
+	
+	//Resta de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la solución.
+	/**
+	 * 
+	 * <p>Método que devuelve la resta de tres números reales. Necesita tres parámetros de entrada que son los números 
+	 * reales que se restarán y que devolverán un valor de salida que será el resultado de la resta. </p>
+	 * 
+	 * <p>Si cualquiera de los parámetros o el resultado final son menores o iguales que 0 entonces devolverá 0 y 
+	 * un mensaje de error. </p>
+	 * 
+	 * Tanto los parámetros como el resultado final no debe superar los 64 bits para evitar el error 
+	 * por superar el límite del tipo double.
+	 * 
+	 * @param numReal1 minuendo que representa uno de los números reales (tipo double). 
+	 * @param numReal2 primer sustraendo que representa otro número reale (tipo double). 
+	 * @param numReal3 segundo sustraendo que representa el tercer número real (tipo double).
+	 *  
+	 * @return devuelve el resultado de restar los tres números reales. Tipor double.
+	 */
+	
+	public double restaTresNumReales (double numReal1, double numReal2, double numReal3) {
+		return numReal1 - numReal2 - numReal3;	
+	}
+	
+	/*Resta con valor acumulado, tendrá un parámetro de entrada y la clase deberá de guardar el 
+	 * valor acumulado.
+	 * */
+	/**
+	 * 
+	 * <p>Método que devuelve el resultado de la resta de un número real y el acumulado global.
+	 * El valorAcumulado se actualizará con el valor resultante.</p>
+	 * 
+	 * Tanto los parámetros como el resultado final no debe superar los 64 bits para evitar el error 
+	 * por superar el límite del tipo double.
+	 * 
+	 * @param numReal1 parámetro de entrada que representa el minuendo (tipo double).
+	 * 
+	 * @return valor double resultado de la resta acumulada total.
+	 */
+	
+	public double restaValorAcumulado (double numReal1) {
+		this.valorAcumulado = this.valorAcumulado - numReal1;
+		return valorAcumulado;
+	}
+	
+	//Getter//
+	public double getValorAcumulado() {
+		return valorAcumulado;
+	}
+	
+	//Setter//
+	public void setValorAcumulado(double valorAcumulado) {
+		this.valorAcumulado=valorAcumulado;
+	}
+	
+}
