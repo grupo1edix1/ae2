@@ -37,8 +37,14 @@ public class Cociente {
 	 *  
 	 * @return devuelve el resultado de la división entre los dos números reales. Tipo double.
 	 */
-	public double divisionNumReales(double numReal1, double numReal2) {
+	public static double cociente(double numReal1, double numReal2) {
+		if (numReal1 <= 0 || numReal2 <=0)  {
+			System.out.println("error");
+			return 0;
+		}
+		else
 		return numReal1 / numReal2;
+		
 	}
 	
 	//División de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
@@ -61,9 +67,15 @@ public class Cociente {
 	 * @return devuelve el resultado de la división entre los dos números enteros. Tipo int.
 	 */
 	
-	public int divisionNumEnteros(int numEntero1, int numEntero2) {
+	public static int cociente(int numEntero1, int numEntero2) {
+
+		if (numEntero1 <= 0 || numEntero2 <=0)  {
+			System.out.println("error");
+			return 0;
+		}
+		else
 		return numEntero1 / numEntero2;
-	}
+	}  
 	
 	//Inverso de un número real, tendrá un parámetro de entrada y uno de salida que será la solución.
 	/**
@@ -83,8 +95,16 @@ public class Cociente {
 	 * @return devuelve el número invertido. Tipo double.
 	 */
 	
-	public double inversoNumReal (double numReal1) {
-		return 1/numReal1;
+	public static double inverso(double numReal1) {
+		
+		
+		if (numReal1 > 0) {
+			return 1/numReal1;
+		}
+		else {
+			System.out.println("no se puede realizar el cálculo");
+			return 0 ;
+		}
 	}
 	
 	//Raíz de un número, tendrá un parámetro de entrada y uno de salida que será la solución.
@@ -105,6 +125,11 @@ public class Cociente {
 	 */
 	
 	public double raizCuadrada(double numero) {
+		if (numero <=  0) {
+			System.out.println("no se puede calcular la operacion");
+			return 0;
+		}
+		else 
 		return Math.sqrt(numero);
 		
 	} 
