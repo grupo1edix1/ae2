@@ -1,5 +1,5 @@
 package javabeans;
-
+//prueba
 /**
  * <h2> Clase Suma </h2>
  * Clase que reúne varios <b>métodos de suma</b>: 
