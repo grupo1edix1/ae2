@@ -1,4 +1,4 @@
-//Clase Suma Prueba
+//Clase Producto Prueba
 
 /**
  * <h2> Clase Producto </h2>
