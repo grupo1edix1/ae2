@@ -3,6 +3,7 @@ package javabeans;
 //prueba2
 //prueba 3
 //prueba 4
+//prueba 5
 /**
  * <h2> Clase Suma </h2>
  * Clase que reúne varios <b>métodos de suma</b>: 
@@ -42,9 +43,12 @@ public class Suma {
 	 * @return devuelve el resultado (tipo double) de la suma de los dos números reales.
 	 */
 	
+
 	public static double suma (double numReal1, double numReal2) {
+
+
 		
-		if (numReal1 > 0 && numReal2 > 0 ) {
+		if (numReal1 >= 0 && numReal2 >= 0 ) {
 			return numReal1 + numReal2;
 		}else
 			System.out.println("error, número negativo");
