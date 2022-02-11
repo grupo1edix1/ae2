@@ -2,6 +2,7 @@ package javabeans;
 //prueba
 //prueba2
 //prueba 3
+//prueba 4
 /**
  * <h2> Clase Suma </h2>
  * Clase que reúne varios <b>métodos de suma</b>: 
