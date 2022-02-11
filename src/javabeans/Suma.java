@@ -1,5 +1,9 @@
 package javabeans;
-
+//prueba
+//prueba2
+//prueba 3
+//prueba 4
+//prueba 5
 /**
  * <h2> Clase Suma </h2>
  * Clase que reúne varios <b>métodos de suma</b>: 
@@ -18,7 +22,7 @@ public class Suma {
 	
 	//Declaro acumulador
 	
-	private double valorAcumulado = 0;
+	private static double valorAcumulado = 0;
 	
 
 	//Suma de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
@@ -39,7 +43,10 @@ public class Suma {
 	 * @return devuelve el resultado (tipo double) de la suma de los dos números reales.
 	 */
 	
-	public double sumaNumReales (double numReal1, double numReal2) {
+
+	public static double suma (double numReal1, double numReal2) {
+
+
 		
 		if (numReal1 >= 0 && numReal2 >= 0 ) {
 			return numReal1 + numReal2;
@@ -65,8 +72,13 @@ public class Suma {
 	 * @return devuelve el resultado (tipo int) de la suma de los dos números enteros.
 	 */
 	
-	public int sumaNumEnteros (int numEntero1, int numEntero2) {
-		return numEntero1 + numEntero2;
+	public static int suma (int numEntero1, int numEntero2) {
+		
+		if (numEntero1 > 0 && numEntero2 > 0 ) {
+			return numEntero1 + numEntero2;
+		}else 
+			System.out.println("error, número negativo");
+		    return 0;
 	
 	}
 	
@@ -88,9 +100,13 @@ public class Suma {
 	 * @return devuelve el resultado (tipo double) de la suma de tres números reales. 
 	 */
 	
-	public double sumaTresNumReales(double numReal1, double numReal2, double numReal3) {
+	public static double suma(double numReal1, double numReal2, double numReal3) {
 		
-		return numReal1 + numReal2 + numReal3;
+		if (numReal1 > 0 && numReal2 > 0 && numReal3 > 0) {
+			return numReal1 + numReal2 + numReal3;
+		}else 
+			System.out.println("error, número negativo");
+		    return 0;
 		
 	}
 	
@@ -113,9 +129,18 @@ public class Suma {
 	 */
 	
 	
-	public double sumaValorAcumulado (double numReal1) {
-		this.valorAcumulado = this.valorAcumulado + numReal1;
-		return valorAcumulado;
+	public static double sumaValorAcumulado (double numReal1) {
+		
+		if (numReal1 > 0) {
+			
+			valorAcumulado = numReal1 + valorAcumulado;
+			return valorAcumulado;
+			
+		}else
+			System.out.println("Error, el número tiene que ser mayor que 0");
+		return 0;
+		
+		
 	}
 	
 	//Getter//
