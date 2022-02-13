@@ -7,11 +7,10 @@ package javabeans;
  * 
  * @author Grupo_1
  * @version 1.0
- * 
- * @see Cociente
- * @see Resta
  * @see Suma
- * 
+ * @see Resta
+ * @see Cociente
+ *
  */
 
 public class Producto {
@@ -34,8 +33,13 @@ public class Producto {
 	 * @return devuelve el resultado de multiplicar de los dos números reales. Tipo double.
 	 */
 	
-	public double productoNumReales (double numReal1, double numReal2) {
+	public static double producto (double numReal1, double numReal2) {
+		if (numReal1>0 && numReal2>0)
 		return numReal1 * numReal2;
+		else {
+			System.out.println("Error: el número debe ser mayor de 0");
+			return 0;}
+			
 	}
 	
 	//Producto de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
@@ -55,8 +59,13 @@ public class Producto {
 	 * @return devuelve el resultado de la multiplicación de los dos números enteros. Tipo int.
 	 */
 	
-	public int productoNumEnteros(int numEntero1, int numEntero2 ) {
-		return numEntero1 * numEntero2;		
+	public static int producto(int numEntero1, int numEntero2 ) {
+		
+		if (numEntero1>0 && numEntero2>0)
+		return numEntero1 * numEntero2;	
+		else {
+			System.out.println("Error: el número debe ser mayor de 0");
+			return 0;}
 	}
 	
 	// Producto de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la solución.
@@ -78,8 +87,13 @@ public class Producto {
 	 * @return devuelve el resultado de multiplicar los tres números reales. Tipo double.
 	 */
 	
-	public double productoTresNumReales(double numReal1, double numReal2, double numReal3) {
+	public static double producto(double numReal1, double numReal2, double numReal3) {
+		if (numReal1>0 && numReal2>0 && numReal3>0)
 		return numReal1 * numReal2 * numReal3;
+		else {
+			System.out.println("Error: el número debe ser mayor de 0");
+			return 0;
+		}
 	}
 	
 	//Potencia, tendrá dos parámetro de entrada (base y exponente) y uno de salida que será la solución.
@@ -99,11 +113,16 @@ public class Producto {
 	 * @return devuelve el resultado de la potencia. Tipo double.
 	 */
 	
-	public double potencia (double base, double exponente ) {
-		return Math.pow(base, exponente);				
+	public static double potencia (double base, double exponente ) {
+		if (base>0 && exponente>0)
+		return Math.pow(base, exponente);
+		else {
+			System.out.println("Error: el número debe ser mayor de 0");
+			return 0;			
+		}
 	}
 	
-
+	
 }
-
+	
 

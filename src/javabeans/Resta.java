@@ -18,7 +18,7 @@ public class Resta {
 	
 	//Declaro atributo de la clase valorAcumulado
 	
-	private double valorAcumulado = 0;
+	private static double valorAcumulado = 1000;
 
 	//Resta de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 	/**
@@ -37,8 +37,16 @@ public class Resta {
 	 * @return devuelve el resultado de la resta de los dos números reales. Tipo double.
 	 */
 	
-	public double restaNumReales(double numReal1, double numReal2) {
-		return numReal1 - numReal2;
+	public static double resta(double numReal1, double numReal2) {
+		
+		
+		if ((numReal1 > 0 && numReal2 > 0) && (numReal1 - numReal2) > 0 ) {
+			return numReal1 - numReal2;
+		}else
+			System.out.println("error, número negativo");
+		return 0;
+		
+		
 	}
 	
 	//Resta de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
@@ -58,8 +66,13 @@ public class Resta {
 	 * @return devuelve el resultado de la resta de los dos números enteros. Tipo int. 
 	 */
 	
-	public int restaNumEnteros (int numEntero1, int numEntero2) {
-		return numEntero1 - numEntero2;
+	public static int resta (int numEntero1, int numEntero2) {
+		
+		if (numEntero1 > 0 && numEntero2 > 0 && (numEntero1 - numEntero2) > 0 ) {
+			return numEntero1 - numEntero2;
+		}else 
+			System.out.println("error, número negativo");
+		    return 0;
 	}
 	
 	//Resta de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la solución.
@@ -81,8 +94,13 @@ public class Resta {
 	 * @return devuelve el resultado de restar los tres números reales. Tipor double.
 	 */
 	
-	public double restaTresNumReales (double numReal1, double numReal2, double numReal3) {
-		return numReal1 - numReal2 - numReal3;	
+	public static double resta (double numReal1, double numReal2, double numReal3) {
+	
+		if (numReal1 > 0 && numReal2 > 0 && numReal3 > 0 && (numReal1 - numReal2 - numReal3) > 0) {
+			return numReal1 - numReal2 - numReal3;
+		}else 
+			System.out.println("error, número negativo");
+		    return 0;
 	}
 	
 	/*Resta con valor acumulado, tendrá un parámetro de entrada y la clase deberá de guardar el 
@@ -90,20 +108,40 @@ public class Resta {
 	 * */
 	/**
 	 * 
-	 * <p>Método que devuelve el resultado de la resta de un número real y el acumulado global.
-	 * El valorAcumulado se actualizará con el valor resultante.</p>
+	 * <p>Método que devuelve el resultado de la resta de un número real y el acumulado global. </p> 
+	 * 
+	 * <p>El valorAcumulado comienza en 1000 y se actualizará con el valor resultante. En el caso de que el valor sea igual o menor 
+	 * que 0 valor acumulado volverá a tener valor de 1000, se imprimirá un error por pantalla y el método devolverá 0. </p>
+	 * 
+	 * 
 	 * 
 	 * Tanto los parámetros como el resultado final no debe superar los 64 bits para evitar el error 
 	 * por superar el límite del tipo double.
+	 * 
+	 * 
 	 * 
 	 * @param numReal1 parámetro de entrada que representa el minuendo (tipo double).
 	 * 
 	 * @return valor double resultado de la resta acumulada total.
 	 */
 	
-	public double restaValorAcumulado (double numReal1) {
-		this.valorAcumulado = this.valorAcumulado - numReal1;
+	public static double restaValorAcumulado (double numReal1) {
+		if (numReal1  >0) {
+		valorAcumulado = valorAcumulado- numReal1;
+		if (valorAcumulado <= 0) {
+			valorAcumulado = 1000; 
+			System.out.println("error el resultado es <0");
+			return 0;
+		
+		}
+		else	
 		return valorAcumulado;
+		}
+		else {
+			System.out.println("valor introducido < 0");
+			return 0;
+			
+		}
 	}
 	
 	//Getter//
