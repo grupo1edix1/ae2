@@ -18,6 +18,16 @@ import java.util.*;
 
 public class Main {
 
+
+	/**
+	 * M todo para el men  de las operaciones de <b>Cociente</b>. Elige entre varias opciones 
+	 * y describe los p rametros de entrada necesarios para la ejecuci n de cada m todo de la clase Cociente.
+	 * <br>
+	 * El men  muestra las diferentes opciones y se navega al introducir n meros enteros. Con 0 se sale 
+	 * de este men  y cualquier valor no v lido mostrar  un mensaje y volver  a mostrarse el men .
+	 */
+
+	
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
 		int x=-1;
