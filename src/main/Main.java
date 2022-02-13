@@ -16,9 +16,11 @@ import java.util.*;
  * @see Cociente
  */
 
+
 public class Main {
 
-
+	
+	
 	/**
 	 * M todo para el men  de las operaciones de <b>Cociente</b>. Elige entre varias opciones 
 	 * y describe los p rametros de entrada necesarios para la ejecuci n de cada m todo de la clase Cociente.
@@ -26,19 +28,18 @@ public class Main {
 	 * El men  muestra las diferentes opciones y se navega al introducir n meros enteros. Con 0 se sale 
 	 * de este men  y cualquier valor no v lido mostrar  un mensaje y volver  a mostrarse el men .
 	 */
-
 	
-	public static void main(String[] args) {
+	public static void menuCociente() {
 		Scanner scan= new Scanner(System.in);
 		int x=-1;
 		while (x!=0)
 		{
 			System.out.println("//////////");
-			System.out.println("Elige opción:");
-			System.out.println("1. División dos reales");
-			System.out.println("2. División dos enteros");
-			System.out.println("3. Inverso de un número");
-			System.out.println("4. Raíz cuadrada");
+			System.out.println("Elige opci n:");
+			System.out.println("1. Divisi n dos reales");
+			System.out.println("2. Divisi n dos enteros");
+			System.out.println("3. Inverso de un n mero");
+			System.out.println("4. Ra z cuadrada");
 			System.out.println("0. Salir");
 			System.out.println("//////////");
 			x = scan.nextInt();
@@ -72,14 +73,8 @@ public class Main {
 				System.out.println("Inv ilido");
 			break;
 			
-			
 			}
 			
 		}
 	}
-	
-	
-
-}
-
-
+	}
