@@ -124,7 +124,7 @@ public class Cociente {
 	 * @return devuelve el resultado de la raiz cuadrada. Tipo double.
 	 */
 	
-	public double raizCuadrada(double numero) {
+	public static double raizCuadrada(double numero) {
 		if (numero <=  0) {
 			System.out.println("no se puede calcular la operacion");
 			return 0;
@@ -132,7 +132,7 @@ public class Cociente {
 		else 
 		return Math.sqrt(numero);
 		
-	} 
+	}
 
 }
 
