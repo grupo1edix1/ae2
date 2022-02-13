@@ -44,7 +44,7 @@ public class Main {
 			menuSuma();
 		break;
 		case 2:
-      menuResta();
+			menuResta();
 		break;
 		case 3: 
 			menuProducto();
@@ -89,7 +89,7 @@ public class Main {
 				System.out.println("Introduce dos reales positivos mayores que cero");
 				double a = scan.nextDouble();
 				double b = scan.nextDouble();
-
+				System.out.println("Resultado: " + Suma.suma(a,b));
 			break;
 			case 2: 
 				System.out.println("Introduce dos enteros positivos mayores que cero");
@@ -123,8 +123,6 @@ public class Main {
 			}
 			
 		}
-	}
-
 	}
 
   /**
