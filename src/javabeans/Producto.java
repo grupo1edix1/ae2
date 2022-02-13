@@ -1,4 +1,4 @@
-//Clase Producto Prueba
+package javabeans;
 
 /**
  * <h2> Clase Producto </h2>
