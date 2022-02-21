@@ -164,8 +164,8 @@ class CocienteTest {
 	@Test
 	void testCociente_inversonNumPositivos () {
 		System.out.println("realizando test");
-		double resultadoEsperado = 1/5 ;
-		double resultadoReal = Cociente.inverso(1/5);
+		double resultadoEsperado = 1/5.5 ;
+		double resultadoReal = Cociente.inverso(5.5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -174,6 +174,14 @@ class CocienteTest {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Cociente.inverso(1/-5);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_inversonConCeros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.inverso(0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}

@@ -42,7 +42,7 @@ class ProductoTest {
 	//Producto de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 
 	@Test
-	void testProducto_numRealesPositivos() {
+	void testProducto_NumRealesPositivos() {
 		System.out.println("realizando test");
 		double resultadoEsperado = 21;
 		double resultadoReal = Producto.producto(10.5, 2);
@@ -50,100 +50,191 @@ class ProductoTest {
 	}
 	
 	@Test
-	void testProducto_numRealesNegativos() {
+	void testProducto_NumRealesNegativos() {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(-20.2, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numRealesNegativos_2() {
+	void testProducto_NumRealesNegativos_2() {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(10, -5.5);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_PrimerFactorCero() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(0, 2.2);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_SegundoFactorCero() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(25, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_Ceros() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(0, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
 	///Probando método: producto de dos números enteros.
 	//Producto de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 	@Test
-	void testProducto_numEnterosPositivos() {
+	void testProducto_NumEnterosPositivos() {
 		System.out.println("realizando test");
 		int resultadoEsperado = 100;
 		int resultadoReal = Producto.producto(20, 5);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numEnterosNegativos() {
+	void testProducto_NumEnterosNegativos() {
 		System.out.println("realizando test");
 		int resultadoEsperado = 0;
 		int resultadoReal = Producto.producto(-10, 5);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numEnterosNegativos_2() {
+	void testProducto_NumEnterosNegativos_2() {
 		System.out.println("realizando test");
 		int resultadoEsperado = 0;
 		int resultadoReal = Producto.producto(25, -10);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_PrimeFactorConCero() {
+		System.out.println("realizando test");
+		int resultadoEsperado = 0;
+		int resultadoReal = Producto.producto(0, 10);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_SegunFactorConCero() {
+		System.out.println("realizando test");
+		int resultadoEsperado = 0;
+		int resultadoReal = Producto.producto(50, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_ConCeros1() {
+		System.out.println("realizando test");
+		int resultadoEsperado = 0;
+		int resultadoReal = Producto.producto(0, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
 	//Probando método: producto de tres números reales.
 	// Producto de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la solución.
 	@Test
-	void testProducto_numRealesCon3FactoresPositivos () {
+	void testProducto_NumRealesCon3FactoresPositivos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 10000;
 		double resultadoReal = Producto.producto(20, 10, 50);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numRealesCon3FactoresNegativos_1 () {
+	void testProducto_NumRealesCon3FactoresNegativos_1 () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(-10, 10, 50);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numRealesCon3FactoresNegativos_2 () {
+	void testProducto_NumRealesCon3FactoresNegativos_2 () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(10, -20, 50);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numRealesCon3FactoresNegativos_3 () {
+	void testProducto_NumRealesCon3FactoresNegativos_3 () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(10, 20, -50);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_numRealesCon3FactoresNegativos_4 () {
+	void testProducto_NumRealesCon3FactoresNegativos_4 () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.producto(-10, -20, -50);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_PrimerFactorConCero() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(0, 25, 35.5);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_SegundoFactorConCero() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(25.5, 0, 10);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_TercerFactorConCero() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(25.5, 12.5, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_TodosConCeros() {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.producto(0, 0, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
 	//Probando potencia.
 	//Potencia, tendrá dos parámetro de entrada (base y exponente) y uno de salida que será la solución.
 	@Test
-	void testProducto_potenciaPositivos () {
+	void testProducto_PotenciaPositivos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 10;
 		double resultadoReal = Producto.potencia(5, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_potenciaNegativos_1 () {
+	void testProducto_PotenciaExponenteCero () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.potencia(5, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_BaseCero () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.potencia(0, 10);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_ConCeros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Producto.potencia(0, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+	}
+	@Test
+	void testProducto_PotenciaBaseNegativos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.potencia(-10, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	@Test
-	void testProducto_potenciaNegativos_2 () {
+	void testProducto_PotenciaExponenteNegativo () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Producto.potencia(10, -5);
