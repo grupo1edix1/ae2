@@ -11,14 +11,14 @@ import org.junit.jupiter.api.Test;
 class ProductoTest {
 	
 	@BeforeAll
-	//se ejecuta una sola vez al ppio
+	//Se ejecuta una sola vez al principio.
 	static void setUpBeforeClass() throws Exception{
 		System.out.println("*****************");
 		System.out.println("comenzando las pruebas");
 		
 	}
 	@AfterAll 
-	//eset se ejecuta una vez al final del todo
+	//Este se ejecuta una vez al final del todo.
 	static void tearDownAfterClass() throws Exception {
 		System.out.println("finalizando de las pruebas");
 		System.out.println("*********************");
@@ -26,19 +26,20 @@ class ProductoTest {
 	}
 	
 	@BeforeEach
-	//se ejecuta antes de cada @test tantas veces como @test hay
+	//Se ejecuta antes de cada @test tantas veces como @test hay.
 	void setUp() throws Exception{
 		System.out.println("Comenzando un test");
 		
 	}
 	@AfterEach
-	//se ejecuta despues de cada @test tantas veces como test hay
+	//Se ejecuta después de cada @test tantas veces como test hay.
 	void tearDown() throws Exception{
 		System.out.println("Finalizando test");
 		
 	}
 	
-	//Probando método: producto de dos números reales
+	//Probando método: producto de dos números reales.
+	//Producto de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 
 	@Test
 	void testProducto_numRealesPositivos() {
@@ -63,7 +64,8 @@ class ProductoTest {
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
-	///Probando método: producto de dos números enteros
+	///Probando método: producto de dos números enteros.
+	//Producto de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 	@Test
 	void testProducto_numEnterosPositivos() {
 		System.out.println("realizando test");
@@ -86,7 +88,8 @@ class ProductoTest {
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
-	//Probando método: producto de tres números reales
+	//Probando método: producto de tres números reales.
+	// Producto de tres números reales, tendrá 3 parámetros de entrada y uno de salida que será la solución.
 	@Test
 	void testProducto_numRealesCon3FactoresPositivos () {
 		System.out.println("realizando test");
@@ -123,7 +126,8 @@ class ProductoTest {
 		assertEquals(resultadoEsperado, resultadoReal);
 	}
 	
-	//Probando potencia
+	//Probando potencia.
+	//Potencia, tendrá dos parámetro de entrada (base y exponente) y uno de salida que será la solución.
 	@Test
 	void testProducto_potenciaPositivos () {
 		System.out.println("realizando test");

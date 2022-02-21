@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 class CocienteTest {
 
 	@BeforeAll
-	//se ejecuta una sola vez al ppio
+	//Se ejecuta una sola vez al principio.
 	static void setUpBeforeClass() throws Exception{
 		System.out.println("*****************");
 		System.out.println("comenzando las pruebas");
@@ -21,7 +21,7 @@ class CocienteTest {
 	}
 	
 	@AfterAll 
-	//eset se ejecuta una vez al final del todo
+	//Este se ejecuta una vez al final del todo.
 	static void tearDownAfterClass() throws Exception {
 		System.out.println("finalizando de las pruebas");
 		System.out.println("*********************");
@@ -29,19 +29,20 @@ class CocienteTest {
 	}
 	
 	@BeforeEach
-	//se ejecuta antes de cada @test tantas veces como @test hay
+	//Se ejecuta antes de cada @test tantas veces como @test hay.
 	void setUp() throws Exception{
 		System.out.println("Comenzando un test");
 		
 	}
 	@AfterEach
-	//se ejecuta despues de cada @test tantas veces como test hay
+	//se ejecuta despues de cada @test tantas veces como test hay.
 	void tearDown() throws Exception{
 		System.out.println("Finalizando test");
 		
 	}
 	
-	//Probando método: división con números reales.	
+	//Probando método: división con números reales.
+	//División de dos números reales, tendrá 2 parámetros de entrada y uno de salida que será la solución.
 	@Test
 	void testCociente_conDividendoNegativo () {
 		System.out.println("realizando test");
@@ -59,7 +60,7 @@ class CocienteTest {
 		
 	}
 	@Test
-	void testCociente_conNumNegativos () {
+	void testCociente_ConNumNegativos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
 		double resultadoReal = Cociente.cociente(-8, -4);
@@ -67,7 +68,7 @@ class CocienteTest {
 		
 	}
 	@Test
-	void testCociente_divisionNumPositivos () {
+	void testCociente_DivisionNumPositivos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 2.1 ;
 		double resultadoReal = Cociente.cociente(10.5, 5);
@@ -75,9 +76,34 @@ class CocienteTest {
 		
 	}
 	
-	//Probando método: división con números enteros.
 	@Test
-	void testCociente_dividendoNegativoEnteros () {
+	void testCociente_DividendoConCerosReales () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(25.5, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_DivisorConCerosReales () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(0, 10);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_ConCerosReales () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(0, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	//Probando método: división con números enteros.
+	//División de dos números enteros, tendrá 2 parámetros de entrada y uno de salida que será la solución.
+	@Test
+	void testCociente_DividendoNegativoEnteros () {
 		System.out.println("realizando test");
 		int resultadoEsperado = 0;
 		int resultadoReal = Cociente.cociente(-20, 5);
@@ -85,7 +111,7 @@ class CocienteTest {
 		
 	}
 	@Test
-	void testCociente_divisorNegativosEnteros () {
+	void testCociente_DivisorNegativosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Cociente.cociente(10, -2);
@@ -93,7 +119,7 @@ class CocienteTest {
 		
 	}
 	@Test
-	void testCociente_divisonConAmbosNumNegativosEnteros () {
+	void testCociente_DivisonConAmbosNumNegativosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
 		double resultadoReal = Cociente.cociente(-5, -5);
@@ -101,15 +127,40 @@ class CocienteTest {
 		
 	}
 	@Test
-	void testCociente_divisionNumPositivosEnteros () {
+	void testCociente_DivisionNumPositivosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 60 ;
 		double resultadoReal = Cociente.cociente(120, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
+	@Test
+	void testCociente_DividendoConCerosEnteros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(0, 5);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_DivisorConCerosEnteros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(100, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_ConCerosEnteros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0 ;
+		double resultadoReal = Cociente.cociente(0, 0);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
 	
 	//Probando método inverso
+	//Inverso de un número real, tendrá un parámetro de entrada y uno de salida que será la solución.
 	@Test
 	void testCociente_inversonNumPositivos () {
 		System.out.println("realizando test");
@@ -128,6 +179,8 @@ class CocienteTest {
 	}
 	
 	//Probando método raiz cuadrada
+	//Raíz de un número, tendrá un parámetro de entrada y uno de salida que será la solución.
+	
 	@Test
 	void testCociente_raizCuadradaNumNegativo () {
 		System.out.println("realizando test");
@@ -141,6 +194,14 @@ class CocienteTest {
 		System.out.println("realizando test");
 		double resultadoEsperado = 5;
 		double resultadoReal = Cociente.raizCuadrada(25);
+		assertEquals(resultadoEsperado, resultadoReal);
+		
+	}
+	@Test
+	void testCociente_raizCuadradaConCeros () {
+		System.out.println("realizando test");
+		double resultadoEsperado = 0;
+		double resultadoReal = Cociente.raizCuadrada(0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
