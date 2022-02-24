@@ -11,6 +11,8 @@ import org.junit.jupiter.api.Test;
 
 
 class CocienteTest {
+	
+	private Cociente c1; 
 
 	@BeforeAll
 	//Se ejecuta una sola vez al principio.
@@ -31,6 +33,7 @@ class CocienteTest {
 	@BeforeEach
 	//Se ejecuta antes de cada @test tantas veces como @test hay.
 	void setUp() throws Exception{
+		c1 = new Cociente();
 		System.out.println("Comenzando un test");
 		
 	}
@@ -47,7 +50,7 @@ class CocienteTest {
 	void testCociente_conDividendoNegativo () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.cociente(-5.5, 2);
+		double resultadoReal = c1.cociente(-5.5, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -55,7 +58,7 @@ class CocienteTest {
 	void testCociente_conDivisorNegativo () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.cociente(8, -2);
+		double resultadoReal = c1.cociente(8, -2);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -63,7 +66,7 @@ class CocienteTest {
 	void testCociente_ConNumNegativos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(-8, -4);
+		double resultadoReal = c1.cociente(-8, -4);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -71,7 +74,7 @@ class CocienteTest {
 	void testCociente_DivisionNumPositivos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 2.1 ;
-		double resultadoReal = Cociente.cociente(10.5, 5);
+		double resultadoReal = c1.cociente(10.5, 5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -80,7 +83,7 @@ class CocienteTest {
 	void testCociente_DividendoConCerosReales () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(25.5, 0);
+		double resultadoReal = c1.cociente(25.5, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -88,7 +91,7 @@ class CocienteTest {
 	void testCociente_DivisorConCerosReales () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(0, 10);
+		double resultadoReal = c1.cociente(0, 10);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -96,7 +99,7 @@ class CocienteTest {
 	void testCociente_ConCerosReales () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(0, 0);
+		double resultadoReal = c1.cociente(0, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -106,7 +109,7 @@ class CocienteTest {
 	void testCociente_DividendoNegativoEnteros () {
 		System.out.println("realizando test");
 		int resultadoEsperado = 0;
-		int resultadoReal = Cociente.cociente(-20, 5);
+		int resultadoReal = c1.cociente(-20, 5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -114,7 +117,7 @@ class CocienteTest {
 	void testCociente_DivisorNegativosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.cociente(10, -2);
+		double resultadoReal = c1.cociente(10, -2);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -122,7 +125,7 @@ class CocienteTest {
 	void testCociente_DivisonConAmbosNumNegativosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.cociente(-5, -5);
+		double resultadoReal = c1.cociente(-5, -5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -130,7 +133,7 @@ class CocienteTest {
 	void testCociente_DivisionNumPositivosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 60 ;
-		double resultadoReal = Cociente.cociente(120, 2);
+		double resultadoReal = c1.cociente(120, 2);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -138,7 +141,7 @@ class CocienteTest {
 	void testCociente_DividendoConCerosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(0, 5);
+		double resultadoReal = c1.cociente(0, 5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -146,7 +149,7 @@ class CocienteTest {
 	void testCociente_DivisorConCerosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(100, 0);
+		double resultadoReal = c1.cociente(100, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -154,7 +157,7 @@ class CocienteTest {
 	void testCociente_ConCerosEnteros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.cociente(0, 0);
+		double resultadoReal =c1.cociente(0, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -165,7 +168,7 @@ class CocienteTest {
 	void testCociente_inversonNumPositivos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 1/5.5 ;
-		double resultadoReal = Cociente.inverso(5.5);
+		double resultadoReal = c1.inverso(5.5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -173,7 +176,7 @@ class CocienteTest {
 	void testCociente_inversoNumNegativos () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.inverso(1/-5);
+		double resultadoReal = c1.inverso(1/-5);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -181,7 +184,7 @@ class CocienteTest {
 	void testCociente_inversonConCeros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = Cociente.inverso(0);
+		double resultadoReal = c1.inverso(0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -193,7 +196,7 @@ class CocienteTest {
 	void testCociente_raizCuadradaNumNegativo () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.raizCuadrada(-10);
+		double resultadoReal = c1.raizCuadrada(-10);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -201,7 +204,7 @@ class CocienteTest {
 	void testCociente_raizCuadradaNumPositivo () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 5;
-		double resultadoReal = Cociente.raizCuadrada(25);
+		double resultadoReal = c1.raizCuadrada(25);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
@@ -209,7 +212,7 @@ class CocienteTest {
 	void testCociente_raizCuadradaConCeros () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0;
-		double resultadoReal = Cociente.raizCuadrada(0);
+		double resultadoReal = c1.raizCuadrada(0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
