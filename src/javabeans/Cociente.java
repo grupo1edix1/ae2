@@ -38,7 +38,7 @@ public class Cociente {
 	 * @return devuelve el resultado de la división entre los dos números reales. Tipo double.
 	 */
 	public static double cociente(double numReal1, double numReal2) {
-		if (numReal1 <= 0 || numReal2 <=0)  {
+		if (numReal1 < 0 || numReal2 < 0)  {
 			System.out.println("error");
 			return 0;
 		}
