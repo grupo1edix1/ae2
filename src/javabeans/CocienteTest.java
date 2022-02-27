@@ -83,7 +83,7 @@ class CocienteTest {
 	void testCociente_DividendoConCerosReales () {
 		System.out.println("realizando test");
 		double resultadoEsperado = 0 ;
-		double resultadoReal = c1.cociente(25.5, 0);
+		double resultadoReal = c1.cociente(25, 0);
 		assertEquals(resultadoEsperado, resultadoReal);
 		
 	}
