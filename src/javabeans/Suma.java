@@ -48,7 +48,7 @@ public class Suma {
 			return numReal1 + numReal2;
 		}else
 			System.out.println("error, número negativo");
-		return -1;
+		return 0;
 		
 	}
 	
@@ -140,13 +140,13 @@ public class Suma {
 	}
 	
 	//Getter//
-	public double getValorAcumulado() {
+	public static double getValorAcumulado() {
 		return valorAcumulado;
 	}
 	
 	//Setter//
-	public void setValorAcumulado(double valorAcumulado) {
-		this.valorAcumulado=valorAcumulado;
+	public static void setValorAcumulado(double valor) {
+		valorAcumulado=valor;
 	}
 	
 	
